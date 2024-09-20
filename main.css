@@ -1,0 +1,143 @@
+:root 
+{
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f5f6fa;
+    --text-color: #34495e;
+}
+
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+.container 
+{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 
+{
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.datetime 
+{
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-group 
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput 
+{
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+button 
+{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addTask 
+{
+    border-radius: 0 4px 4px 0;
+}
+
+button:hover 
+{
+    background-color: #2980b9;
+}
+
+ul 
+{
+    list-style-type: none;
+}
+
+li 
+{
+    background-color: #f1f2f6;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deleteTask 
+{
+    background-color: #e74c3c;
+    border-radius: 4px;
+}
+
+.deleteTask:hover 
+{
+    background-color: #c0392b;
+}
+
+@media (max-width: 480px) 
+{
+    .container 
+    {
+        padding: 20px;
+    }
+
+    .input-group 
+    {
+        flex-direction: column;
+    }
+
+    #taskInput, #addTask 
+    {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+
+    li 
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .deleteTask 
+    {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}

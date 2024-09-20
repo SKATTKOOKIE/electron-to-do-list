@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-packager": "^17.1.2"
+  },
+  "main": "main.js",
+  "name": "electron-todo-app",
+  "version": "1.0.0",
+  "description": "A simple To-Do List application",
+  "author": "Brandon Hinton",
+  "license": "None",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . electron-todo-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icon.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Todo App\"",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icon.icns --prune=true --out=release-builds",
+    "package-linux": "electron-packager . electron-todo-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icon.png --prune=true --out=release-builds"
+  }
+}
